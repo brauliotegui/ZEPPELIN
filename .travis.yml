@@ -11,7 +11,7 @@ install:
 script:
 - pytest
 - pylint zeppelin/*.py
-- pytest --cov=./
+#- pytest --cov=./
 
 # # Push the results back to codecov
 after_success:
