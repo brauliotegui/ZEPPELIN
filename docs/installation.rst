@@ -8,7 +8,7 @@ Installation
 Stable release
 --------------
 
-To install ZEPPELIN2, run this command in your terminal:
+To install ZEPPELIN, run this command in your terminal:
 
 .. code-block:: console
 
@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/brauliotegui/zeppelin2
+    $ git clone git://github.com/brauliotegui/zeppelin
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl -OJL https://github.com/brauliotegui/zeppelin2/tarball/master
+    $ curl -OJL https://github.com/brauliotegui/zeppelin/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/brauliotegui/ZEPPELIN
-.. _tarball: https://github.com/brauliotegui/ZEPPELIN/tarball/master
+.. _Github repo: https://github.com/brauliotegui/zeppelin
+.. _tarball: https://github.com/brauliotegui/zeppelin/tarball/master

@@ -5,7 +5,7 @@
 import pytest
 
 
-from zeppelin import predictor
+from zeppelin import zeppelin
 
 
 @pytest.fixture

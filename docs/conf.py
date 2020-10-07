@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# zeppelin2 documentation build configuration file, created by
+# zeppelin documentation build configuration file, created by
 # sphinx-quickstart on Fri Jun  9 13:47:02 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -157,3 +157,6 @@ texinfo_documents = [
      'One line description of project.',
      'Miscellaneous'),
 ]
+
+
+
