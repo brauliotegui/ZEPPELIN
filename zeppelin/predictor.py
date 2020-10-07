@@ -1,4 +1,4 @@
-""" This is the main py file to run the program.
+""" This is the main module to run the program.
 
 It accepts three outputs:
  1. Name of the first artist
