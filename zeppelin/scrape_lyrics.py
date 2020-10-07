@@ -38,13 +38,13 @@ def save_all_lyrics(url, directory):
 
 
     #LOOP TO CREATE LYRIC TEXT FILES FOR EACH LYRIC LINK
-    for i in links:
+    for i in range(len(links)):
         temp_url = links[i]              #create temporary links for each link on the links list
         title = temp_url.split('/')[-1]  #create title based on the temp lyric url
 
         temp_req = requests.get(temp_url) #request each temp lyric link
 
         with open(directory + title + '.txt', 'w') as file:
-            soup_artist = BeautifulSoup(temp_req.text)    #create a bsoup out of each lyric file
+            soup_artist = BeautifulSoup(temp_req.text, features="lxml")    #create a bsoup out of each lyric file
             lyrics = soup_artist.pre.get_text()           #get only the text from lyrics
             file.writelines(lyrics)

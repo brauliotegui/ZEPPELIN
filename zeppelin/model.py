@@ -41,7 +41,7 @@ def predict(new_text):
     y = df.index
 
     model = MultinomialNB(alpha=0.005)
-    model.fit(X, Y)
+    model.fit(X, y)
 
     songlyrics = [new_text]
     # transform song into vector matrix
@@ -49,5 +49,6 @@ def predict(new_text):
     ynew = new_song_vecs.todense()
 
     prediction = model.predict(ynew)
+    print(f"This song belongs to {prediction}")
 
     return prediction[0]

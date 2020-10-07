@@ -22,7 +22,7 @@ def create_corpuslist(directory, artist_name):
     #LOOP FOR ADDING LYRIC FILES INTO A LIST
     files_list = os.listdir(directory)
 
-    for i in files_list:
+    for i in range(len(files_list)):
         title = files_list[i]
         LABEL.append(artist_name)
 
