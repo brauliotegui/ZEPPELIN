@@ -20,11 +20,10 @@ def create_corpuslist(directory, artist_name):
 
     """
     #LOOP FOR ADDING LYRIC FILES INTO A LIST
-    list = os.listdir(directory)
-    list_size = len(LABEL)  #original size
+    files_list = os.listdir(directory)
 
-    for i in list:
-        title = list[i]
+    for i in files_list:
+        title = files_list[i]
         LABEL.append(artist_name)
 
         with open(directory + title, 'r') as reader:
@@ -34,5 +33,4 @@ def create_corpuslist(directory, artist_name):
             CORPUS.append(doc)
 
 
-    print(artist_name, (len(LABEL) - list_size))
-    print('Do we have as many song lyrics as artist indices?: ' + str(len(CORPUS) == len(LABEL)))
+    assert len(CORPUS) == len(LABEL)
