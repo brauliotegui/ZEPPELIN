@@ -26,7 +26,7 @@ PASSING_CONDITIONS = ['https://www.lyrics.com/artist/Koffee/3491656',
  'https://www.lyrics.com/artist/MF-Doom/300089',
  'https://www.lyrics.com/artist/Danger-Doom/742954']
 
-PASSING_CONDITIONS2 = ['Koffee', 'MF DOOM', 'Danger Doom']
+NAME = ['Koffee', 'MF DOOM', 'Danger Doom']
 
 @pytest.mark.parametrize("url", PASSING_CONDITIONS, "name", PASSING_CONDITIONS2)
 def test_save_all_lyrics(url, name):
@@ -36,6 +36,7 @@ def test_save_all_lyrics(url, name):
 
 # test if the corpus lists have correct size
 def test_create_corpuslist(name):
+    create_lyricscorpus.create_corpuslist(NAME)
     assert len(CORPUS) == len(LABEL)
 
 # test the possible outcomes of the predictions and the merge and train function
