@@ -4,7 +4,7 @@ import os
 CORPUS = []
 LABEL = []
 
-def create_corpuslist(directory, artist_name):
+def create_corpuslist(artist_name):
     """
     Create a list out of every song lyrics downloaded.
 
@@ -20,6 +20,7 @@ def create_corpuslist(directory, artist_name):
 
     """
     #LOOP FOR ADDING LYRIC FILES INTO A LIST
+    directory = 'lyrics-files/' + artist_name + '/'
     files_list = os.listdir(directory)
 
     for i in range(len(files_list)):

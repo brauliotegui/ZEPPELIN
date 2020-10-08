@@ -1,6 +1,7 @@
 '''This program scrapes lyrics from an arist page on www.lyrics.com
     and saves them as text files in the specified directory'''
-
+import os
+import shutil
 import requests
 from bs4 import BeautifulSoup
 
@@ -11,14 +12,20 @@ def save_all_lyrics(url, directory):
     Parameters
     ----------
     url = url link of the artist page
-    directory = directory where you want to save all the file
-    both parameters need to be strings
+    directory = directory where you all files are saved/ artist's name
 
     Returns
     -------
     download song files into chosen directory.
 
     """
+    dir = 'lyrics-files/' + directory
+    if os.path.exists(dir):
+        shutil.rmtree(dir)
+    os.makedirs(dir)
+
+    dirname = dir + '/'
+
     #DOWNLOAD ARTIST URL AS TEXT FILE
     request = requests.get(url)         # Send the request
     with open(str(url.split('/')[-2]) + '.txt', 'w') as file: # Save the html in a txt file
@@ -44,7 +51,7 @@ def save_all_lyrics(url, directory):
 
         temp_req = requests.get(temp_url) #request each temp lyric link
 
-        with open(directory + title + '.txt', 'w') as file:
+        with open(dirname + title + '.txt', 'w') as file:
             soup_artist = BeautifulSoup(temp_req.text, features="lxml")    #create a bsoup out of each lyric file
             lyrics = soup_artist.pre.get_text()           #get only the text from lyrics
             file.writelines(lyrics)
