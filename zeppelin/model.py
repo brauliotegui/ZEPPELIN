@@ -7,7 +7,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
-import create_lyricscorpus as clc
+import zeppelin.create_lyricscorpus as clc
 
 def vectors_and_df(corpus, label):
     """creates vectors for songs and returns dataframe with songs as word vectors

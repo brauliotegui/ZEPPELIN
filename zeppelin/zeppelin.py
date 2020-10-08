@@ -8,9 +8,9 @@ It accepts three outputs:
  save it as a csv file and train a naive bayes model to predict the artitst of
  the given lyrics
  """
-from scrape_lyrics import save_all_lyrics
-from create_lyricscorpus import create_corpuslist
-from model import predict
+from zeppelin.scrape_lyrics import save_all_lyrics
+from zeppelin.create_lyricscorpus import create_corpuslist
+from zeppelin.model import predict
 
 
 if __name__ == '__main__':
