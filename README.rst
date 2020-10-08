@@ -22,6 +22,8 @@ ZEPPELIN
 
 A python program that scrapes lyrics from any artist on lyrics.com and train a lyrics predictor model to predict the artist of the song/text.
 
+.. image:: https://github.com/brauliotegui/ZEPPELIN/blob/master/zeppelindemo.gif
+
 
 * Free software: MIT license
 * Documentation: https://zeppelin.readthedocs.io.
