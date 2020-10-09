@@ -28,7 +28,7 @@ PASSING_CONDITIONS = ['https://www.lyrics.com/artist/Koffee/3491656',
 
 NAME = ['Koffee', 'MF DOOM', 'Danger Doom']
 
-@pytest.mark.parametrize("url", PASSING_CONDITIONS, "name", PASSING_CONDITIONS2)
+@pytest.mark.parametrize("url", PASSING_CONDITIONS, "name", NAME)
 def test_save_all_lyrics(url, name):
     url, name = save_all_lyrics(url, name)
     files_list = os.listdir('lyrics-files/')
